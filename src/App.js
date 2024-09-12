@@ -1,25 +1,23 @@
-import logo from './logo.svg';
-import './App.css';
+import LeftNavigation from './components/LeftNavigation'
+import AllProducts from './pages/AllProducts'
+import Brands from './pages/Brands'
+import CreateProduct from './pages/CreateProduct'
+import Home from './pages/Home'
 
-function App() {
+
+const App = () => {
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
+    <div className="font-roboto bg-slate-200 dark:bg-gray-700 scrollbar-thumb-rounded-full scrollbar-thumb-cyan-700 scrollbar-thin  scrollbar-track-slate-300 h-screen overflow-y-scroll flex">
+      <LeftNavigation></LeftNavigation>
+      <div className="pt-4 pr-4 w-full">
+        <Brands />
+        {/*<ProductDetails />*/}
+        <AllProducts />
+        <CreateProduct />
+        <Home />
+      </div>
     </div>
-  );
+  )
 }
 
-export default App;
+export default App
